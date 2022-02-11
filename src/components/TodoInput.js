@@ -4,7 +4,7 @@ import {FaBook} from 'react-icons/fa'
 export default class TodoInput extends Component {
   render() {
     const {item,handleChange} = this.props
-    return <div className='card card-body my-3'>
+    return (<div className='card card-body my-3'>
       <form>
         <div className='input-group'>
           <div className="input-group-prepend">
@@ -15,10 +15,11 @@ export default class TodoInput extends Component {
           <input type="text" className='form-control text-capitalize' placeholder='add a todo item' value={item}
             onChange={handleChange}/>
         </div>
-        <button type='submit' className='btn btn-block btn-primary mt-5'>
+        <button type='submit' className="btn btn-block btn-primary mt-3">
           add item
         </button>
       </form>
-    </div> ;
+    </div>
+    );
   }
 }
